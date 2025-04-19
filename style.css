@@ -1,0 +1,132 @@
+/* Root variables for reusability */
+:root {
+  --green: #198754;
+  --dark-green: #14532d;
+  --light-text: #fff;
+  --caption-bg: rgba(0, 0, 0, 0.6);
+}
+
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar customization */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Carousel captions */
+.carousel-caption {
+  background-color: var(--caption-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--light-text);
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+}
+
+/* Section headings */
+h2 {
+  font-weight: 700;
+  color: var(--dark-green);
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-weight: 700;
+  color: var(--dark-green);
+  font-size: 1.75rem;
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--green);
+}
+
+/* Footer styling */
+footer {
+  background: linear-gradient(to right, var(--green), var(--dark-green));
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Contact section */
+#contact p {
+  margin: 0.3rem 0;
+}
+
+/* Mobile tweaks */
+@media (max-width: 576px) {
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+  background-color: #1e1e1e !important;
+}
+
+.dark-mode .card {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.dark-mode .carousel-caption {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+  
