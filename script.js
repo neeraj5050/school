@@ -1,34 +1,30 @@
+// Toggle Responsive Navbar
 function myFunction() {
-    let x = document.getElementById("myTopnav");
-    if (x.className === "navbar-lists") {
-        x.className += " responsive";
-    } else {
-        x.className = "navbar-lists";
-    }
+    const nav = document.getElementById("myTopnav");
+    nav.classList.toggle("responsive");
 }
 
-const scrollLinks = document.querySelectorAll('.navbar-link');
-
-scrollLinks.forEach(link => {
+// Smooth Scroll to Sections
+document.querySelectorAll('.navbar-link').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
+
         const targetId = this.getAttribute('href');
-        if (targetId) {
-            const targetElement = document.getElementById(targetId.substring(1));
+        if (targetId && targetId.startsWith("#")) {
+            const targetElement = document.querySelector(targetId);
+
             if (targetElement) {
                 const offsetTop = targetElement.offsetTop;
+
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
                 });
             } else {
-                console.error(`Element with id '${targetId.substring(1)}' not found.`);
+                console.error(Element with ID '${targetId.substring(1)}' not found.);
             }
         } else {
-            console.error('No href attribute found.');
+            console.error('Invalid or missing href attribute.');
         }
     });
 });
-
-
-  
